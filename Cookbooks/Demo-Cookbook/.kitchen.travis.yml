@@ -1,0 +1,11 @@
+---
+driver:
+  name: docker
+
+platforms:
+    - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[DemoCookbook::default]

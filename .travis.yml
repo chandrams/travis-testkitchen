@@ -1,0 +1,41 @@
+language: node_js
+notifications:
+  email: false
+  slack:
+    secure: PutYourSlackAPITokenHere
+sudo: false
+
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - chef-stable-trusty
+    packages:
+      - chefdk
+
+bundler_args: --without='vagrant'
+
+install:
+  - source start_docker.sh
+  - cd ./cookbooks/Demo-Cookbook
+  - gem install bundler
+
+branches:
+  only:
+    - master
+
+services: docker
+
+env:
+  - INSTANCE=ubuntu-1604
+
+before_script:
+  - eval "$(/opt/chefdk/bin/chef shell-init bash)"
+  - /opt/chefdk/embedded/bin/chef --version
+  - /opt/chefdk/embedded/bin/cookstyle --version
+  - /opt/chefdk/embedded/bin/foodcritic --version
+
+script:
+  - bundle --full-index
+  - bundle exec rake travis
