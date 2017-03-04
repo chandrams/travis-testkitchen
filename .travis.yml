@@ -18,7 +18,7 @@ bundler_args: --without='vagrant'
 
 install:
   - source start_docker.sh
-  - cd ./cookbooks/Demo-Cookbook
+  - cd ./cookbooks/demo-cookbook
   - gem install bundler
 
 branches:
