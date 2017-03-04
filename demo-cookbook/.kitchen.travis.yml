@@ -8,4 +8,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[DemoCookbook::default]
+      - recipe[demo-cookbook::default]

@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[hangops-jobbot::default]
+      - recipe[demo-cookbook::default]
     attributes:
