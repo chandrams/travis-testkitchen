@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-#Include an external recipe so that we can converge something. Install Git.
+# Include an external recipe so that we can converge something. Install Git.
 include_recipe 'git::default'
