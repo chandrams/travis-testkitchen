@@ -18,4 +18,3 @@ group :local do
   gem 'kitchen-vagrant', '~> 0.19.0'
   gem 'vagrant-wrapper'
 end
-
