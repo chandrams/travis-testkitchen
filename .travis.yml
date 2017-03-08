@@ -3,7 +3,7 @@ notifications:
   email: false
   slack:
     secure: PutYourSlackAPITokenHere
-sudo: false
+sudo: required
 
 dist: trusty
 
@@ -18,7 +18,6 @@ bundler_args: --without='vagrant'
 
 install:
   - source start_docker.sh
-  - cd ./demo-cookbook
   - gem install bundler
 
 branches:
