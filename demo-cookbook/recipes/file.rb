@@ -1,4 +1,4 @@
-file "/root/chandra/chef/hello.txt" do
+file "/tmp/hello.txt" do
 	content "Hello, this is my first cookbook recipe\n how are you?"
 action :create
 end
