@@ -13,5 +13,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[demo-cookbook::default]
+      - recipe[demo-cookbook::file]
     attributes:
