@@ -28,6 +28,7 @@ services: docker
 
 env:
   - INSTANCE=ubuntu-1604
+  - KITCHEN_LOCAL_YAML=.kitchen.yml 
 
 before_script:
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
@@ -40,3 +41,4 @@ script:
   - bundle --full-index
   # Test suite
   - bundle exec rake travis
+  - bundle exec kitchen test
