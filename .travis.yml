@@ -40,5 +40,5 @@ script:
   # Run index to make some tetchy gems work
   - bundle --full-index
   # Test suite
-  - bundle exec rake travis
+  #- bundle exec rake travis
   - bundle exec kitchen test
